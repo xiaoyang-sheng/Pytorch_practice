@@ -28,6 +28,9 @@ class network(nn.Module):
         values = self.layers(x)
         return values
 
+
+model = network()
+
 # torch.nn.Flatten(start_dim=1, end_dim=- 1) by default to preserve one dim
 # start_dim：first dim to flatten (default = 1)
 # end_dim：last dim to flatten (default = -1)
