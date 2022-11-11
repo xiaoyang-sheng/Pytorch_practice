@@ -24,10 +24,10 @@ labels_map = {
 figure = plt.figure(figsize=(8,8))
 cols,rows = 3,3
 for i in range(1,cols * rows + 1):
-    sample_index = torch.randint(len(train_data),size=(1,)).item() # 获取随机索引
-    img,label = train_data[sample_index] # 找到随机索引下的图像和标签
-    figure.add_subplot(rows,cols,i) # 增加子图，add_subplot面向对象，subplot面向函数
+    sample_index = torch.randint(len(train_data),size=(1,)).item() # obtain the random label
+    img,label = train_data[sample_index] # get the corresponding image and labels
+    figure.add_subplot(rows,cols,i) # add object to subplot
     plt.title(labels_map[label])
-    plt.axis("off") # 关闭坐标轴
-    plt.imshow(img.squeeze(),cmap='gray') # 对图像进行处理,cmap颜色图谱
+    plt.axis("off") # turn off the axel
+    plt.imshow(img.squeeze(),cmap='gray') # gray
 plt.show()
